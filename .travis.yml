@@ -1,6 +1,21 @@
 os: linux
-arch: ppc64le
+
+language: java
+services:
+  - docker
+cache: bundler
 dist: bionic
-language: minimal
-script:
-- echo "test"
+
+install: skip
+
+jobs:
+  include:
+    - name: failing
+      script: true
+
+after_success:
+  - echo done
+  - echo $TRAVIS_TEST_RESULT
+after_failure:
+  - echo failed
+  - echo $TRAVIS_TEST_RESULT
