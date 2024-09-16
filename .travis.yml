@@ -1,0 +1,6 @@
+os: linux
+arch: ppc64le
+dist: bionic
+language: minimal
+script:
+- echo "test"
