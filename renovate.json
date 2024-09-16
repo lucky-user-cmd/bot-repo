@@ -1,5 +1,3 @@
 {
   "extends": ["config:base"]
-  "schedule": ["at 13:25 every day"],
-  "timezone": "Europe/Berlin"
 }
